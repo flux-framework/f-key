@@ -32,8 +32,12 @@ button_state = False
 touch = touchio.TouchIn(board.TOUCH)
 touch_state = False
 
-# print a string on keypress
-key_output = "Hello World!\n"
+# This enters an ƒ character in gnome
+key_output = (
+    {'keys': (Keycode.CONTROL, Keycode.SHIFT, Keycode.U), 'delay': 0.2},
+    {'keys': "0192", 'delay':0.0},
+    {'keys': Keycode.SPACE, 'delay':0.0},
+)
 
 # one character on keypress
 # key_output = Keycode.A
